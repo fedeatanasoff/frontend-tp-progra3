@@ -194,8 +194,37 @@ export class DepartamentoService {
     return this.departamentos;
   }
 
-  getAtletas(id: string) {
+  getDeptoAtletas(id: string) {
     return this.departamentos[id];
+  }
+
+  getAtletas(): Atleta[] {
+    const at: Atleta[] = [];
+
+    for (const depto of this.departamentos) {
+      for (const atleta of depto.atletas) {
+        at.push(atleta);
+      }
+    }
+
+    console.log(at);
+    return at;
+  }
+
+  buscarAtleta(texto: string): Atleta[] {
+    const arrayRes: Atleta[] = [];
+    texto = texto.toLowerCase();
+    const atletas: Atleta[] = this.getAtletas();
+
+    for (const atleta of atletas) {
+      const nombre = atleta.nombre.toLowerCase();
+
+      if (nombre.indexOf(texto) >= 0) {
+        arrayRes.push(atleta);
+      }
+    }
+
+    return arrayRes;
   }
 }
 

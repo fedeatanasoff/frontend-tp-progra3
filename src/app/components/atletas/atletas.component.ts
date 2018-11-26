@@ -14,7 +14,7 @@ export class AtletasComponent implements OnInit {
     private _departamentoService: DepartamentoService
   ) {
     this.activatedRoute.params.subscribe(params => {
-      this.depto = this._departamentoService.getAtletas(params["id"]);
+      this.depto = this._departamentoService.getDeptoAtletas(params["id"]);
       console.log(this.depto);
     });
   }

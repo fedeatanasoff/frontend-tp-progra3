@@ -10,6 +10,7 @@ import { DepartamentosComponent } from "./components/departamentos/departamentos
 import { APP_ROUTING } from "./app.routes";
 import { AtletasComponent } from "./components/atletas/atletas.component";
 import { AboutComponent } from "./components/about/about.component";
+import { BuscadorComponent } from "./components/buscador/buscador.component";
 
 // SERVICIOS
 import { DepartamentoService } from "./servicios/departamento.services";
@@ -21,7 +22,8 @@ import { DepartamentoService } from "./servicios/departamento.services";
     HomeComponent,
     DepartamentosComponent,
     AtletasComponent,
-    AboutComponent
+    AboutComponent,
+    BuscadorComponent
   ],
   imports: [BrowserModule, APP_ROUTING],
   providers: [DepartamentoService],

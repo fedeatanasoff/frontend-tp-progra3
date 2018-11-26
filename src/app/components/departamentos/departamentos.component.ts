@@ -13,12 +13,14 @@ import { Router } from "@angular/router";
 export class DepartamentosComponent implements OnInit {
   departamentos: Departamento[] = [];
   extension = ".png";
+  atletas: any[] = [];
 
   constructor(
     private _departamentoService: DepartamentoService,
     private router: Router
   ) {
     console.log("constructor");
+    this.atletas = this._departamentoService.getAtletas();
   }
 
   ngOnInit() {
@@ -31,5 +33,9 @@ export class DepartamentosComponent implements OnInit {
   verAtletas(id: number) {
     const idx = id - 1;
     this.router.navigate(["/atletas", idx]);
+  }
+
+  getAtletas() {
+    console.log(this.atletas);
   }
 }
