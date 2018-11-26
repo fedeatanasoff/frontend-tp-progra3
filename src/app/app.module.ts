@@ -8,8 +8,11 @@ import { DepartamentosComponent } from "./components/departamentos/departamentos
 
 // RUTAS
 import { APP_ROUTING } from "./app.routes";
-import { AtletasComponent } from './components/atletas/atletas.component';
-import { AboutComponent } from './components/about/about.component';
+import { AtletasComponent } from "./components/atletas/atletas.component";
+import { AboutComponent } from "./components/about/about.component";
+
+// SERVICIOS
+import { DepartamentoService } from "./servicios/heroes.services";
 
 @NgModule({
   declarations: [
@@ -21,7 +24,7 @@ import { AboutComponent } from './components/about/about.component';
     AboutComponent
   ],
   imports: [BrowserModule, APP_ROUTING],
-  providers: [],
+  providers: [DepartamentoService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
