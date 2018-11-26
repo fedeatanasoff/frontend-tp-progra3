@@ -34,9 +34,19 @@
               />
             </div>
             <div class="card-text">
-              <button type="button" class="btn btn-warning">ver atletas</button>
+              <button
+                (click)="verAtletas(depto.id)"
+                type="button"
+                class="btn btn-warning"
+              >
+                ver atletas
+              </button>
             </div>
-
+            <!--
+              <a [routerLink]="['/atletas', depto.id]" class="btn btn-warning"
+                >VER MAS</a
+              >
+            -->
             <!--
               <p class="card-text">
                 Some quick example text to build on the card title and make up the

@@ -3,6 +3,7 @@ import {
   DepartamentoService,
   Departamento
 } from "../../servicios/heroes.services";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-departamentos",
@@ -13,7 +14,10 @@ export class DepartamentosComponent implements OnInit {
   departamentos: Departamento[] = [];
   extension = ".png";
 
-  constructor(private _departamentoService: DepartamentoService) {
+  constructor(
+    private _departamentoService: DepartamentoService,
+    private router: Router
+  ) {
     console.log("constructor");
   }
 
@@ -22,5 +26,10 @@ export class DepartamentosComponent implements OnInit {
 
     this.departamentos = this._departamentoService.getDepartamentos();
     console.log(this.departamentos);
+  }
+
+  verAtletas(id: number) {
+    console.log(id);
+    this.router.navigate(["/atletas", id]);
   }
 }
