@@ -12,7 +12,7 @@ import { AtletasComponent } from "./components/atletas/atletas.component";
 import { AboutComponent } from "./components/about/about.component";
 
 // SERVICIOS
-import { DepartamentoService } from "./servicios/heroes.services";
+import { DepartamentoService } from "./servicios/departamento.services";
 
 @NgModule({
   declarations: [

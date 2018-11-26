@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { DepartamentosComponent } from "../components/departamentos/departamentos.component";
 
 @Injectable()
 export class DepartamentoService {
@@ -191,6 +192,10 @@ export class DepartamentoService {
 
   getDepartamentos(): Departamento[] {
     return this.departamentos;
+  }
+
+  getAtletas(id: string) {
+    return this.departamentos[id];
   }
 }
 

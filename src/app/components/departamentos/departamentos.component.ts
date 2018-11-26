@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import {
   DepartamentoService,
   Departamento
-} from "../../servicios/heroes.services";
+} from "../../servicios/departamento.services";
 import { Router } from "@angular/router";
 
 @Component({
@@ -29,7 +29,7 @@ export class DepartamentosComponent implements OnInit {
   }
 
   verAtletas(id: number) {
-    console.log(id);
-    this.router.navigate(["/atletas", id]);
+    const idx = id - 1;
+    this.router.navigate(["/atletas", idx]);
   }
 }

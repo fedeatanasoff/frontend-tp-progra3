@@ -1,3 +1,13 @@
-<p>
-  atletas works!
-</p>
+<div class="container">
+  <div>
+    <div class="card" style="width: 18rem;" *ngFor="let item of depto.atletas">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ item.nombre }} <small>- {{ item.nacionalidad }}</small>
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ item.deporte }}</h6>
+      </div>
+    </div>
+    <a [routerLink]="['/departamentos']" class="btn btn-info">Regresar</a>
+  </div>
+</div>
