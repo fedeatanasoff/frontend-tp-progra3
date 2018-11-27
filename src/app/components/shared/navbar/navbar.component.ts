@@ -11,8 +11,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {}
 
   buscarAtleta(texto: string) {
-    console.log(texto);
-
-    this.router.navigate(["/buscar", texto]);
+    if (texto) {
+      this.router.navigate(["/buscar", texto]);
+    }
   }
 }
