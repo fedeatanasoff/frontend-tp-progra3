@@ -27,14 +27,16 @@
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['home']">Home </a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['about']">About</a>
-        </li>
+        <!--
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['about']">About</a>
+          </li>
+        -->
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['departamentos']">Departamentos</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <div class="form-inline my-2 my-lg-0">
         <input
           class="form-control mr-sm-2"
           placeholder="buscar atleta"
@@ -48,7 +50,7 @@
         >
           Buscar
         </button>
-      </form>
+      </div>
     </div>
   </div>
 </nav>

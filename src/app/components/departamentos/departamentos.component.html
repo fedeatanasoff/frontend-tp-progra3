@@ -2,10 +2,20 @@
   <h1 class="text-center">Departamentos</h1>
 
   <div class="card-columns mt-5">
-    <div class="card text-center" *ngFor="let depto of departamentos">
+    <div
+      class="card text-center bg-light text-dark"
+      *ngFor="let depto of departamentos"
+    >
       <div class="card-body">
         <h5 class="card-title">Departamento #{{ depto.id }}</h5>
-
+        <div class="card-title">
+          Genero:
+          <img
+            src="../../../assets/img/icon-{{ depto.atletas[0].genero | lowercase }}.png"
+            alt=""
+            width="15rem"
+          />
+        </div>
         <div class="row justify-content-md-center">
           <div class="col-md-3" *ngFor="let atleta of depto.atletas">
             <img
