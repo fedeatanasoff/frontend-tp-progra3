@@ -14,12 +14,16 @@ export class DepartamentosComponent implements OnInit {
   departamentos: Departamento[] = [];
   extension = ".png";
   atletas: any[] = [];
+  optimizacion = 0;
 
   constructor(
     private _departamentoService: DepartamentoService,
     private router: Router
   ) {
     this.atletas = this._departamentoService.getAtletas();
+    this.optimizacion = this._departamentoService
+      .getSolver()
+      .optimizacion.toFixed(2);
   }
 
   ngOnInit() {
