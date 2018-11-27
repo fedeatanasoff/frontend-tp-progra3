@@ -20,8 +20,6 @@ export class BuscadorComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.texto = params["texto"];
       this.atletas = this._departamentoService.buscarAtleta(params["texto"]);
-      console.log(this.atletas);
-      console.log(this.texto);
     });
   }
 }

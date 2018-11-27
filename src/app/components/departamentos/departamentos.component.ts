@@ -19,15 +19,11 @@ export class DepartamentosComponent implements OnInit {
     private _departamentoService: DepartamentoService,
     private router: Router
   ) {
-    console.log("constructor");
     this.atletas = this._departamentoService.getAtletas();
   }
 
   ngOnInit() {
-    console.log("ng on init");
-
     this.departamentos = this._departamentoService.getDepartamentos();
-    console.log(this.departamentos);
   }
 
   verAtletas(id: number) {
@@ -36,6 +32,6 @@ export class DepartamentosComponent implements OnInit {
   }
 
   getAtletas() {
-    console.log(this.atletas);
+    //console.log(this.atletas);
   }
 }

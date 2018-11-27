@@ -9,13 +9,13 @@ import { DepartamentoService } from "../../servicios/departamento.services";
 })
 export class AtletasComponent implements OnInit {
   depto: any = {};
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private _departamentoService: DepartamentoService
   ) {
     this.activatedRoute.params.subscribe(params => {
       this.depto = this._departamentoService.getDeptoAtletas(params["id"]);
-      console.log(this.depto);
     });
   }
 

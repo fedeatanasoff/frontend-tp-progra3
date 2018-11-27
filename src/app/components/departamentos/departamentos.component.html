@@ -1,5 +1,5 @@
-<div class="container mt-5">
-  <h1 class="text-center">Departamentos</h1>
+<div class="container mt-5 animated fedeIn ">
+  <h2 class="display-4 text-center animated fedeIn">Departamentos</h2>
 
   <div class="card-columns mt-5">
     <div
@@ -44,38 +44,4 @@
       </div>
     </div>
   </div>
-  <!--
-    <div class="mt-5">
-      <div class="row">
-        <div class="col-sm" *ngFor="let depto of departamentos">
-          <div class="card text-white bg-info mb-3 animated fadeIn fast">
-            <div class="card-header">Optimizacion: 100%</div>
-            <div class="card-body">
-              <h5 class="card-title">Departamento #{{ depto.id }}</h5>
-              <div *ngFor="let atleta of depto.atletas">
-                <img
-                  src="../../../assets/img/banderas/{{ atleta.nacionalidad | lowercase }}.png"
-                  alt=""
-                />
-                <img
-                  src="../../../assets/img/deportes/{{ atleta.deporte | lowercase }}.png"
-                  alt=""
-                  width="50px"
-                />
-              </div>
-              <div class="card-text">
-                <button
-                  (click)="verAtletas(depto.id)"
-                  type="button"
-                  class="btn btn-warning"
-                >
-                  ver atletas
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  -->
 </div>
