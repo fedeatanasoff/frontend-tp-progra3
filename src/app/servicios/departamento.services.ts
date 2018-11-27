@@ -49,13 +49,13 @@ export class DepartamentoService {
           genero: "MASCULINO"
         },
         {
-          nombre: "Gast�n Bald",
+          nombre: "Gastón Bald",
           nacionalidad: "Uruguay",
           deporte: "voley",
           genero: "MASCULINO"
         },
         {
-          nombre: "Pablo Rodr�guez",
+          nombre: "Pablo Rodríguez",
           nacionalidad: "Uruguay",
           deporte: "voley",
           genero: "MASCULINO"
@@ -109,20 +109,20 @@ export class DepartamentoService {
     {
       atletas: [
         {
-          nombre: "Rosangela Lopez",
-          nacionalidad: "Colombia",
+          nombre: "Macarena Sanz",
+          nacionalidad: "Argentina",
           deporte: "futbol",
           genero: "FEMENINO"
         },
         {
           nombre: "Analia Elaskar",
-          nacionalidad: "Colombia",
+          nacionalidad: "Argentina",
           deporte: "futbol",
           genero: "FEMENINO"
         },
         {
           nombre: "Gabriela Escobar",
-          nacionalidad: "Colombia",
+          nacionalidad: "Argentina",
           deporte: "futbol",
           genero: "FEMENINO"
         },
@@ -138,12 +138,6 @@ export class DepartamentoService {
     },
     {
       atletas: [
-        {
-          nombre: "Macarena Sanz",
-          nacionalidad: "Argentina",
-          deporte: "handball",
-          genero: "FEMENINO"
-        },
         {
           nombre: "Valentina Galiano",
           nacionalidad: "Argentina",
@@ -161,6 +155,12 @@ export class DepartamentoService {
           nacionalidad: "Brasil",
           deporte: "basquet",
           genero: "FEMENINO"
+        },
+        {
+          nombre: "Rosangela Lopez",
+          nacionalidad: "Colombia",
+          deporte: "futbol",
+          genero: "FEMENINO"
         }
       ],
       ocupados: 4,
@@ -169,20 +169,20 @@ export class DepartamentoService {
     {
       atletas: [
         {
-          nombre: "Leonor Abtt",
-          nacionalidad: "Colombia",
-          deporte: "futbol",
-          genero: "FEMENINO"
-        },
-        {
           nombre: "Paola Valenzuela",
           nacionalidad: "Colombia",
           deporte: "hockey",
           genero: "FEMENINO"
         },
         {
+          nombre: "Leonor Abtt",
+          nacionalidad: "Peru",
+          deporte: "futbol",
+          genero: "FEMENINO"
+        },
+        {
           nombre: "Monica Rios",
-          nacionalidad: "Colombia",
+          nacionalidad: "Peru",
           deporte: "voley",
           genero: "FEMENINO"
         }
