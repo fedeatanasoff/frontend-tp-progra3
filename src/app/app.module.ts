@@ -14,6 +14,7 @@ import { BuscadorComponent } from "./components/buscador/buscador.component";
 
 // SERVICIOS
 import { DepartamentoService } from "./servicios/departamento.services";
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DepartamentoService } from "./servicios/departamento.services";
     DepartamentosComponent,
     AtletasComponent,
     AboutComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    FooterComponent
   ],
   imports: [BrowserModule, APP_ROUTING],
   providers: [DepartamentoService],

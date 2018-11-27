@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container mt-5">
   <h1>Buscando: {{ texto }}</h1>
-  <div class="row" *ngIf="atletas.length === 0">
+  <div class="row mt-5" *ngIf="atletas.length === 0">
     <div class="col-md-12">
       <div class="alert alert-info" role="alert">
         no existen resultados para: {{ texto }}
@@ -8,13 +8,31 @@
     </div>
   </div>
 
-  <div class="card" style="width: 18rem;" *ngFor="let atleta of atletas">
-    <div class="card-body">
-      <h5 class="card-title">
-        {{ atleta.nombre }} <small>- {{ atleta.nacionalidad }}</small>
-      </h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{ atleta.deporte }}</h6>
+  <div class="row justify-content-md-center mt-5">
+    <div class="col-sm" *ngFor="let atleta of atletas">
+      <div class="media">
+        <img
+          class="mr-3"
+          src="../../../assets/img/{{ atleta.genero | lowercase }}.png"
+          alt="Generic placeholder image"
+          width="64px"
+        />
+        <div class="media-body">
+          <h5 class="mt-0">
+            {{ atleta.nombre }} <small>- {{ atleta.nacionalidad }}</small>
+          </h5>
+          <p>{{ atleta.deporte }}</p>
+        </div>
+      </div>
     </div>
   </div>
-  <a [routerLink]="['/departamentos']" class="btn btn-info">Regresar</a>
+
+  ,
+  <div class="row justify-content-md-center mt-5">
+    <div class="col-md-3">
+      <a [routerLink]="['/departamentos']" class="btn btn-info"
+        >Regresar a Departamentos</a
+      >
+    </div>
+  </div>
 </div>

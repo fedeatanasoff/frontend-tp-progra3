@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "format:fix": "pretty-quick --staged",
     "precommit": "run-s format:fix lint",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build --prod",
+    "ngstart": "ng serve -o"
   },
   "private": true,
   "dependencies": {

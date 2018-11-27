@@ -1,64 +1,71 @@
 <div class="container mt-5">
   <h1 class="text-center">Departamentos</h1>
-  <button (click)="getAtletas()" type="button" class="btn btn-warning">
-    ver atletas
-  </button>
-  <div class="mt-5">
-    <div class="row">
-      <div class="col-sm-4">
-        <!--
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+
+  <div class="card-columns mt-5">
+    <div class="card text-center" *ngFor="let depto of departamentos">
+      <div class="card-body">
+        <h5 class="card-title">Departamento #{{ depto.id }}</h5>
+
+        <div class="row justify-content-md-center">
+          <div class="col-md-3" *ngFor="let atleta of depto.atletas">
+            <img
+              src="../../../assets/img/banderas/{{ atleta.nacionalidad | lowercase }}.png"
+              alt=""
+              width="50rem"
+              class="mt-1"
+            />
+            <img
+              src="../../../assets/img/deportes/{{ atleta.deporte | lowercase }}.png"
+              alt=""
+              width="50em"
+              class="mt-1"
+            />
           </div>
-        -->
-        <div
-          class="card text-white bg-info mb-3 animated fadeIn fast"
-          *ngFor="let depto of departamentos"
-        >
-          <div class="card-header">Optimizacion: 100%</div>
-          <div class="card-body">
-            <h5 class="card-title">Departamento #{{ depto.id }}</h5>
-            <div *ngFor="let atleta of depto.atletas">
-              <img
-                src="../../../assets/img/banderas/{{ atleta.nacionalidad | lowercase }}.png"
-                alt=""
-              />
-              <img
-                src="../../../assets/img/deportes/{{ atleta.deporte | lowercase }}.png"
-                alt=""
-                width="50px"
-              />
-            </div>
-            <div class="card-text">
-              <button
-                (click)="verAtletas(depto.id)"
-                type="button"
-                class="btn btn-warning"
-              >
-                ver atletas
-              </button>
-            </div>
-            <!--
-              <a [routerLink]="['/atletas', depto.id]" class="btn btn-warning"
-                >VER MAS</a
-              >
-            -->
-            <!--
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </p>
-            -->
-          </div>
+        </div>
+        <div class="card-text mt-3">
+          <button
+            (click)="verAtletas(depto.id)"
+            type="button"
+            class="btn btn-warning"
+          >
+            ver atletas
+          </button>
         </div>
       </div>
     </div>
   </div>
+  <!--
+    <div class="mt-5">
+      <div class="row">
+        <div class="col-sm" *ngFor="let depto of departamentos">
+          <div class="card text-white bg-info mb-3 animated fadeIn fast">
+            <div class="card-header">Optimizacion: 100%</div>
+            <div class="card-body">
+              <h5 class="card-title">Departamento #{{ depto.id }}</h5>
+              <div *ngFor="let atleta of depto.atletas">
+                <img
+                  src="../../../assets/img/banderas/{{ atleta.nacionalidad | lowercase }}.png"
+                  alt=""
+                />
+                <img
+                  src="../../../assets/img/deportes/{{ atleta.deporte | lowercase }}.png"
+                  alt=""
+                  width="50px"
+                />
+              </div>
+              <div class="card-text">
+                <button
+                  (click)="verAtletas(depto.id)"
+                  type="button"
+                  class="btn btn-warning"
+                >
+                  ver atletas
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
 </div>
