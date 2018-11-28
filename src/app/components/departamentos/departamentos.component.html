@@ -1,7 +1,19 @@
 <div class="container mt-5 mb-5 animated fedeIn ">
   <h2 class="display-4 text-center animated fedeIn">Departamentos</h2>
   <hr />
-  <h5 class="text-center">Optimizacion: {{ optimizacion }}%</h5>
+  <h5 class="text-center">Optimizacion:</h5>
+  <div class="progress mt-4">
+    <div
+      class="progress-bar"
+      role="progressbar"
+      [style.width]="optimizacion + '%'"
+      aria-valuenow="25"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      {{ optimizacion }}%
+    </div>
+  </div>
   <div class="card-columns mt-5">
     <div
       class="card text-center bg-light text-dark"
